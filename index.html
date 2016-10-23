@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Phing - a PHP build tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,400italic">
+    <!-- Stroke 7 font by Pixeden (http://www.pixeden.com/icon-fonts/stroke-7-icon-font-set)-->
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="css/helper.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.css" id="theme-stylesheet">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <div id="all">
+      <!-- navbar-->
+      <header class="header">
+        <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header"><a href="#all" class="navbar-brand scroll-to"><img src="img/logo.gif" alt="Phing logo" class="hidden-xs hidden-sm"><img src="img/logo-small.png" alt="Phing logo" class="visible-xs visible-sm"><span class="sr-only">Go to homepage</span></a>
+              <div class="navbar-buttons">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="pe-7s-menu"></i></button>
+              </div>
+            </div>
+            <div id="navigation" class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li><a href="#features" class="scroll-to">Features</a></li>
+                <li><a href="#install" class="scroll-to">Installation</a></li>
+                <li><a href="#docs" class="scroll-to">Documentation</a></li>
+                <li><a href="#contribute" class="scroll-to">Contribute</a></li>
+                <li><a href="#support" class="scroll-to">Support</a></li>
+              </ul>
+<br>
+<div class="pull-right">
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="https://www.phing.info"></a>
+</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="intro" class="text-intro no-padding-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center"><p><b>PH</b>ing <b>I</b>s <b>N</b>ot <b>G</b>NU make</h3>
+<p>Phing is a PHP project build system or build tool based on ​Apache Ant. You can do anything with it that you could do with a traditional build system like GNU make, and its use of simple XML build files and extensible PHP "task" classes make it an easy-to-use and highly flexible build framework.</p>
+
+<p>Features include running PHPUnit unit tests (including test result and coverage reports), file transformations (e.g. token replacement, XSLT transformation, template transformations), file system operations, interactive build support, SQL execution, Git/Subversion operations, tools for creating PEAR packages, documentation generation (PhpDocumentor, ApiGen) and much, much more.</p>
+
+<p>If you find yourself writing custom scripts to handle the packaging, deploying, or testing of your applications, then we suggest looking at Phing. Pre-packaged with numerous out-of-the-box operation modules (tasks), and an easy-to-use OO model to extend or add your own custom tasks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   *** FEATURES ***-->
+      <section id="features" class="section">
+        <div class="container">
+          <div class="row text-center-mobile"> 
+            <div class="col-md-12">
+              <h2 class="text-center">Features</h2>
+              <div class="row">
+                <div class="col-sm-6 text-center">
+                  <h5>Simple XML buildfiles</h5>
+                  <h5>Rich set of provided tasks</h5>
+                  <h5>Easily extendable via PHP classes</h5>
+                </div>
+                <div class="col-sm-6 text-center">
+                  <h5>Works on Linux, Mac & Windows</h5>
+                  <h5>No required external dependencies</h5>
+                  <h5>Built for PHP 5</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   *** FEATURES END ***  -->
+      <!--   *** TEXT ***-->
+      <section id="install" class="text-page section background-gray-lightest">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-center">Installation</h2>
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4 id="Composer">Composer</h4>
+                  <p>
+                  Install Phing by adding a dependency to <a class="ext-link" href="https://packagist.org/packages/phing/phing">phing/phing</a> to the
+                  require-dev or require section of your project's composer.json  
+                  configuration file, and running 'composer install':
+                  </p>
+                  <pre>{
+    "require-dev": {
+        "phing/phing": "2.*"
+    }
+}</pre>
+                  <h4 id="Phar">Phar</h4>
+                  <p>
+                  Download the <a href="http://www.phing.info/get/phing-latest.phar">Phar archive</a>. The archive can then be executed by running:
+                  </p>
+                  <pre>php phing-latest.phar</pre>
+                  <ul><li><a href="http://www.phing.info/get/phing-2.15.2.phar">phing-2.15.2.phar</a> (<a href="http://www.phing.info/get/phing-2.15.2.phar.sha512">sha-512 hash</a>)
+                  </li></ul>
+                </div>
+                <div class="col-sm-6">
+                  <h4 id="PEAR">PEAR</h4>
+                  <p>
+                  You can install Phing by adding the <em>pear.phing.info</em> channel to your PEAR environment and then installing Phing using the <em>phing</em> channel alias and <em>phing</em> package name:
+                  </p>
+                  <pre>pear channel-discover pear.phing.info
+pear install [--alldeps] phing/phing</pre>
+                  <p>
+                  For more info, refer to the <a class="ext-link" href="http://pear.phing.info">PEAR channel</a>.
+                  </p>
+
+                  <h4 id="Manualinstall">Manual install</h4>
+                  <p>
+                  The full Phing package has a more traditional directory organization and contains the full documentation, test scripts, and build.xml files for (e.g.) building the PEAR-installable package.  Please download one of the packages below if you would like to install the full Phing package.
+                  </p>
+                  <ul><li><a href="http://www.phing.info/get/phing-2.15.2.tgz">phing-2.15.2.tgz</a> (<a href="http://www.phing.info/get/phing-2.15.2.tgz.sha512">sha-512 hash</a>)
+                  </li><li><a href="http://www.phing.info/get/phing-2.15.2.zip">phing-2.15.2.zip</a> (<a href="http://www.phing.info/get/phing-2.15.2.zip.sha512">sha-512 hash</a>)
+                  </li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   *** TEXT END ***-->
+      <!--   *** INTEGRATIONS ***-->
+      <section id="docs" class="section-gray">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-md-12">
+             <h2 class="text-center">Documentation</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box box-services">
+                    <h4>Phing User Guide</h1>
+                    <p>
+                    The most comprehensive source for Phing documentation.
+                    </p>
+                    <h5 id="Stableversion">Stable version</h5>
+                    <ul>
+                      <li><a href="http://www.phing.info/docs/guide/stable/">Chunked HTML</a></li>
+                      <li><a href="http://www.phing.info/docs/stable/hlhtml/index.html">Single HTML page</a></li>
+                      <li><a href="http://www.phing.info/docs/stable/hlpdf/manual.pdf">PDF</a></li>
+                      <li><a href="http://www.phing.info/docs/stable/epub/manual.epub">EPUB</a></li>
+                    </ul>
+                    <p>
+                    Or, you can install the <em>phingdocs</em> PEAR package:
+                    </p>
+                    <pre>pear channel-discover pear.phing.info
+pear install phing/phingdocs</pre>
+                    <h5 id="Developmenttrunkmasterversion">Development (trunk/master) version</h5>
+                    <ul>
+                      <li><a href="http://www.phing.info/docs/guide/trunk/">Chunked HTML</a></li>
+                      <li><a href="http://www.phing.info/docs/master/hlhtml/index.html">Single HTML page</a></li>
+                      <li><a href="http://www.phing.info/docs/master/hlpdf/manual.pdf">PDF</a></li>
+                      <li><a href="http://www.phing.info/docs/master/epub/manual.epub">EPUB</a></li>
+                    </ul>
+                    <h5 id="RELAXNGschema">RELAX NG schema</h5>
+                    <ul><li><a href="http://www.phing.info/docs/relaxng/stable/phing-grammar.rng">Stable version</a>
+                    </li><li><a href="http://www.phing.info/docs/relaxng/stable/phing-grammar.rng">Development version</a>
+                    </li></ul>
+                    <h5 id="APIdocumentation">API documentation</h5>
+                    <ul><li><a href="http://www.phing.info/docs/api/trunk/">API Docs</a> - API documentation, generated nightly from the development version using <a class="ext-link" href="http://www.phpdoc.org">phpDocumentor</a>.
+                    </li></ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="box box-services">
+                    <h5 id="Tutorials">Tutorials</h5>
+                    <ul><li><a class="ext-link" href="http://www.davedevelopment.co.uk/2008/04/14/how-to-simple-database-migrations-with-phing-and-dbdeploy">Migrations with Phing and DbDeploy</a>
+                    </li><li><a class="ext-link" href="http://extraordinaire.me/deployment/phing-skeleton-files">Skeleton files with ExportProperties</a>
+                    </li></ul>
+                    <h5 id="Presentations">Presentations</h5>
+                    <ul><li><a class="ext-link" href="http://www.slideshare.net/michieltcs/building-and-deploying-php-applications-with-phing">Building and deploying PHP applications with Phing</a> - Slides from Michiel Rook's talk at the 2012 PHP UK Conference in London.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/michieltcs/deploying-php-applications-with-phing">Deploying applications with Phing</a> - Slides from Michiel Rook's talk at the 2011 PHPNW Conference in Manchester.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/michieltcs/phing-dpc-uncon-slideshare">Phing - A PHP Build Tool</a> - Slides from Michiel Rook's talk at the 2011 Dutch PHP Conference (Unconference track) in Amsterdam.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/mdekrijger/phing-7900127">PHPBenelux - Using Phing</a> - Slides from Marco de Krijger's talk at the PHPBenelux Meetup, May 10th 2011.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/domudall/phing-presentation">Phing</a> - Phing presentation by Dom Udall at PHPLondon on 2nd September 2010.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/hozn/putting-phing-to-work-for-you/">Putting Phing to Work for You</a> - Slides from workshop at 2007 International PHP Conference in Frankfurt.
+                    </li><li><a class="ext-link" href="http://www.slideshare.net/hozn/phing-building-with-php/">Phing: Building with PHP</a> - Slides from Phing presentation at 2007 International PHP Conference in Frankfurt.
+                    </li></ul><p>
+                    More Phing (related) presentations can be found here: <a class="ext-link" href="http://www.slideshare.net/tag/phing">http://www.slideshare.net/tag/phing</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contribute" class="background-gray-lightest">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">Contribute</h3>
+              <p class="text-center">We <i class="fa fa-heart" aria-label="heart"></i> contributions! There are a number of ways that you can get involved in Phing development.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Help us spot & fix bugs</h5>
+                  <p>We greatly appreciate it when users report issues or come up with feature requests. However, there are a few guidelines you should observe before submitting a new issue:</p>
+                  <ul>
+                  <li>Make sure the issue has not already been submitted, by searching through the list of (closed) issues.</li>
+                  <li>Support and installation questions should be asked on Twitter, Slack or IRC, not filed as issues.</li>
+                  <li>Give a good description of the problem, this also includes the necessary steps to reproduce the problem!</li>
+                  <li>If you have a solution - please tell us! This doesn't have to be code. We appreciate any snippets, thoughts, ideas, etc that can help us resolve the issue.</li>
+                  </ul>
+                  <p>Issues can be reported on <a href="​https://github.com/phingofficial/phing/issues">​GitHub</a>.</p>
+                  <h5>Documentation</h5>
+                  <p>We can always use better documentation. The user guide is written in DocBook and can be found in <em>docs/docbook5/en/source</em>. The source is rendered to multiple formats (html, pdf, etc.), these can be found in <em>docs/docbook5/en/output</em>).</p>
+                </div>
+                <div class="col-md-6">
+                  <h5>Unit tests</h5>
+                  <p>To successfully run all Phing tests, please ensure you have the following setup:
+                  <ul>
+                  <li>PEAR installed, channel <em>pear.phing.info</em> discovered</li>
+                  <li>On Linux: package <em>python-docutils</em> installed</li>
+                  <li>php.ini setting <em>phar.readonly</em> set to <em>Off</em></li>
+                  </ul>
+                  <p>Then, perform the following steps (on a clone/fork of Phing):
+<pre>composer install
+cd test
+../bin/phing
+</pre></p>
+                  <h5>Pull requests</h5>
+                  <p>The best way to submit code to Phing is to <a href="https://help.github.com/articles/creating-a-pull-request">make a Pull Request on GitHub</a>. Please keep your pull requests clean and concise: squash commits, don't introduce unnecessary (whitespace) changes, use verbose commit messages. Phing's source code is formatted according to the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md">PSR-2 standard</a>.</p>
+                </div>
+              </div>
+              <p class="text-center">Phing's source code is hosted on <a href="https://github.com/phingofficial/phing">GitHub</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="support" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">Support</h3>
+              <p class="text-center">There are several ways to get help if you are having problems with Phing.</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="box-simple">
+                    <div class="icon"><i class="fa fa-twitter" title="Twitter"></i></div>
+                    <p class="text-muted">Follow <a href="https://twitter.com/phingofficial">@phingofficial</a> on Twitter.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="box-simple">
+                    <div class="icon"><i class="fa fa-slack" title="Slack"></i></div>
+                    <p class="text-muted">Join the <a href="https://www.phing.info/slack/">Slack team</a>.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="box-simple">
+                    <div class="icon"><i class="pe-7s-chat" title="IRC"></i></div>
+                    <p class="text-muted">Join the <em>#phing</em> IRC channel on ​<a href="https://freenode.net">Freenode</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>&copy;2016 Phing.</p>
+<p>Phing is licensed under the <a href="https://raw.githubusercontent.com/phingofficial/phing/master/LICENSE">​GNU Lesser Public General License (LGPL) version 3</a>.</p>
+              </div>
+              <div class="col-md-6">
+                <p class="credit pull-right">
+                  Template by <a href="http://bootstrapious.com/landing-pages" class="external">Bootstrapious</a><br/>
+                  Hosting provided by <a href="http://www.touchdownconsulting.nl" target="_blank" title="Touchdown Consulting Services - freelance webdevelopment">Touchdown Consulting Services</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://use.fontawesome.com/04b03eb9bc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/ekko-lightbox.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
+    <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t =
+document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */</script>
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-7335499-6');ga('send','pageview');
+    </script>
+  </body>
+</html>
