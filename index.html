@@ -117,8 +117,10 @@
                     <h2 class="text-center">Installation</h2>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            Latest version: <strong><a href="https://github.com/phingofficial/phing/releases/latest"
+                            Latest stable version: <strong><a href="https://github.com/phingofficial/phing/releases/2.16.1"
                                                        target="_blank">2.16.1</a></strong>
+                            Latest alpha version: <strong><a href="https://github.com/phingofficial/phing/releases/3.0.0a1"
+                                                       target="_blank">3.0.0a1</a></strong>
                         </div>
                     </div>
                     <div class="row">
@@ -135,21 +137,35 @@
         "phing/phing": "2.*"
     }
 }</pre>
+                            <p>Or, if you want to install the latest alpha version:</p>
+<pre>{
+    "require-dev": {
+        "phing/phing": "3.*"
+    },
+    "min-stability": "alpha"
+}</pre>
                             <h4 id="Phar">Phar</h4>
                             <p>
-                                Download the <a href="/get/phing-latest.phar">Phar archive</a> (<a
+                                Download the <a href="/get/phing-latest.phar">Phar archive</a> (version 2.16.1, <a
                                     href="/get/phing-latest.phar.sha512">sha-512 hash</a>). The archive can then be
                                 executed by running:
                             </p>
                             <pre>php phing-latest.phar</pre>
+                            <p>Or directly download a specific version:</p>
                             <ul>
                                 <li><a href="/get/phing-2.16.1.phar">phing-2.16.1.phar</a> (<a
                                         href="/get/phing-2.16.1.phar.sha512">sha-512 hash</a>)
                                 </li>
+                                <li><a href="/get/phing-3.0.0a1.phar">phing-3.0.0a1.phar</a> (
+                                  <a href="/get/phing-3.0.0a1.phar.asc">asc hash</a>
+                                  <a href="/get/phing-3.0.0a1.phar.sha1">sha-1 hash</a>
+                                  <a href="/get/phing-3.0.0a1.phar.sha512">sha-512 hash</a>
+                                )
+                                </li>
                             </ul>
                         </div>
                         <div class="col-sm-6">
-                            <h4 id="PEAR">PEAR</h4>
+                            <h4 id="PEAR">PEAR (deprecated)</h4>
                             <p>
                                 <strong>Our PEAR channel has been deprecated. Starting from 3.0, Phing will only be
                                     available through Composer or as a .phar archive.</strong>
@@ -166,7 +182,7 @@ pear install [--alldeps] phing/phing</pre>
                                 channel</a>.
                             </p>
 
-                            <h4 id="Manualinstall">Manual install</h4>
+                            <h4 id="Manualinstall">Manual install (deprecated)</h4>
                             <p>
                                 <strong>Starting from version 3.0, Phing will only be available through Composer or as a
                                     .phar archive.</strong>
