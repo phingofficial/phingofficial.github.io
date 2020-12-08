@@ -48,6 +48,7 @@
                         <li><a href="#docs" class="scroll-to">Documentation</a></li>
                         <li><a href="#contribute" class="scroll-to">Contribute</a></li>
                         <li><a href="#support" class="scroll-to">Support</a></li>
+                        <li><a href="#latest" class="scroll-to">Latest</a></li>
                     </ul>
                     <br>
                     <div class="pull-right">
@@ -77,9 +78,9 @@
 
                     <p>Features include running PHPUnit unit tests (including test result and coverage reports), file
                         transformations (e.g. token replacement, XSLT transformation, template transformations), file
-                        system operations, interactive build support, SQL execution, Git/Subversion operations, tools
-                        for creating PEAR packages, documentation generation (PhpDocumentor, ApiGen) and much, much
-                        more.</p>
+                        system operations, interactive build support, SQL execution, Git, Mercurial and Subversion
+                        operations, tools for creating PEAR packages, documentation generation (PhpDocumentor, ApiGen)
+                        and much, much more.</p>
 
                     <p>If you find yourself writing custom scripts to handle the packaging, deploying, or testing of
                         your applications, then we suggest looking at Phing. Pre-packaged with numerous out-of-the-box
@@ -256,6 +257,10 @@ pear install [--alldeps] phing/phing</pre>
                                 <h5 id="Presentations">Presentations</h5>
                                 <ul>
                                     <li><a target="_blank"
+                                           href="https://speakerdeck.com/kenguest/phing-an-introduction-phpdublin-june-2015">Phing - An
+                                        Introduction</a> - Slide's from Ken Guest's talk at PHPDublin, June 2015
+                                    </li>
+                                    <li><a target="_blank"
                                            href="http://www.slideshare.net/michieltcs/building-and-deploying-php-applications-with-phing">Building
                                         and deploying PHP applications with Phing</a> - Slides from Michiel Rook's talk
                                         at the 2012 PHP UK Conference in London.
@@ -405,6 +410,25 @@ cd test
             </div>
         </div>
     </section>
+    <section id="latest" class="background-gray-lightest">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="text-center">Latest</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <p class="text-center"> <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/phingofficial"> Tweets by @phingofficial </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </p>
+              </div>
+              <div class="col-md-8">
+              <h5>Latest Release</h5>
+              <p id="latestRelease">&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
         <div class="footer__copyright">
             <div class="container">
@@ -449,6 +473,18 @@ cd test
     }(window, document, 'script', 'ga'));
     ga('create', 'UA-7335499-6');
     ga('send', 'pageview');
+</script>
+<script>
+$.ajax({
+            type: 'GET',
+            url: "https://api.github.com/repos/phingofficial/phing/releases/latest",
+            dataType: 'json',
+            cache: false,
+            data: '',
+            success: function (result, textStatus) {
+                $('#latestRelease').html("<strong>" + result.tag_name + "</strong><br/>" + result.body.replace(/\n/g,"<br>"));
+            }
+});
 </script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
