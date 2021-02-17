@@ -120,8 +120,8 @@
                         <div class="col-md-12 text-center margin-bottom">
                             Latest stable version: <strong><a href="https://github.com/phingofficial/phing/releases/2.16.4"
                                                        target="_blank">2.16.4</a></strong>
-                            Latest alpha version: <strong><a href="https://github.com/phingofficial/phing/releases/3.0.0-alpha4"
-                                                       target="_blank">3.0.0-alpha4</a></strong>
+                            Latest alpha version: <strong><a href="https://github.com/phingofficial/phing/releases/3.0.0-RC1"
+                                                       target="_blank">3.0.0-RC1</a></strong>
                             <br>
                             <strong>
                                 NB: we are intending 2.16.4 to be the last release of the 2.x series, while we are
@@ -162,13 +162,21 @@
                                 <li><a href="/get/phing-2.16.4.phar">phing-2.16.4.phar</a> (<a
                                         href="/get/phing-2.16.4.phar.sha512">sha-512 hash</a>)
                                 </li>
-                                <li><a href="/get/phing-3.0.0-alpha4.phar">phing-3.0.0-alpha4.phar</a> (
-                                  <a href="/get/phing-3.0.0-alpha4.phar.asc">asc hash</a> |
-                                  <a href="/get/phing-3.0.0-alpha4.phar.sha1">sha-1 hash</a> |
-                                  <a href="/get/phing-3.0.0-alpha4.phar.sha512">sha-512 hash</a>
+                                <li><a href="/get/phing-3.0.0-RC1.phar">phing-3.0.0-RC1.phar</a> (
+                                  <a href="/get/phing-3.0.0-RC1.phar.asc">signature file</a> |
+                                  <a href="/get/phing-3.0.0-RC1.phar.sha1">sha-1 hash</a> |
+                                  <a href="/get/phing-3.0.0-RC1.phar.sha512">sha-512 hash</a>
                                 )
                                 </li>
                             </ul>
+                            <p>
+                                <strong>NB:</strong> starting from 3.0.0-RC1, all releases are signed using GPG.
+                                The <i>release@phing.info</i> public key can be downloaded
+                                <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/56697956EBD451594B03AEFDD5F0CB76E2DD74F8">here</a>.
+                                To verify a release, run:
+                            </p>
+                            <pre>curl https://keys.openpgp.org/vks/v1/by-fingerprint/56697956EBD451594B03AEFDD5F0CB76E2DD74F8 | gpg --import
+gpg --verify phing-3.0.0-RC1.phar.asc</pre>
                         </div>
                         <div class="col-sm-6">
                             <h4 id="PEAR">PEAR (deprecated)</h4>
