@@ -118,14 +118,13 @@
                     <h2 class="text-center">Installation</h2>
                     <div class="row">
                         <div class="col-md-12 text-center margin-bottom">
-                            Latest stable version: <strong><a href="https://github.com/phingofficial/phing/releases/2.17.4"
-                                                       target="_blank">2.17.4</a></strong>
-                            Latest beta version: <strong><a href="https://github.com/phingofficial/phing/releases/3.0.0-rc6"
-                                                       target="_blank">3.0.0-RC6</a></strong>
+                            Latest stable version: <strong><a href="https://github.com/phingofficial/phing/releases/3.0.0"
+                                                       target="_blank">3.0.0</a></strong>
+                            Latest legacy version: <strong><a href="https://github.com/phingofficial/phing/releases/2.17.4"
+                                                              target="_blank">2.17.4</a></strong>
                             <br>
                             <strong>
-                                NB: we are intending 2.17.4 to be the last release of the 2.x series, while we are
-                                working on releasing Phing 3.0
+                                NB: we intending 3.0.0 to be the last release of the 2.x series.
                             </strong>
                         </div>
                     </div>
@@ -152,31 +151,32 @@
 }</pre>
                             <h4 id="Phar">Phar</h4>
                             <p>
-                                Download the <a href="/get/phing-latest.phar">Phar archive</a> (version 2.17.4, <a
+                                Download the <a href="/get/phing-latest.phar">Phar archive</a> (version 3.0.0, <a
                                     href="/get/phing-latest.phar.sha512">sha-512 hash</a>). The archive can then be
                                 executed by running:
                             </p>
                             <pre>php phing-latest.phar</pre>
                             <p>Or directly download a specific version:</p>
                             <ul>
-                                <li><a href="/get/phing-2.17.4.phar">phing-2.17.4.phar</a> (<a
-                                        href="/get/phing-2.17.4.phar.sha512">sha-512 hash</a>)
+                                <li><a href="/get/phing-3.0.0.phar">phing-3.0.0.phar</a> (
+                                    <a href="/get/phing-3.0.0.phar.asc">signature file</a> |
+                                    <a href="/get/phing-3.0.0.phar.sha1">sha-1 hash</a> |
+                                    <a href="/get/phing-3.0.0.phar.sha512">sha-512 hash</a>
+                                    )
                                 </li>
-                                <li><a href="/get/phing-3.0.0-RC6.phar">phing-3.0.0-RC6.phar</a> (
-                                  <a href="/get/phing-3.0.0-RC6.phar.asc">signature file</a> |
-                                  <a href="/get/phing-3.0.0-RC6.phar.sha1">sha-1 hash</a> |
-                                  <a href="/get/phing-3.0.0-RC6.phar.sha512">sha-512 hash</a>
+                                <li><a href="/get/phing-2.17.4.phar">phing-2.17.4.phar</a> (
+                                    <a href="/get/phing-2.17.4.phar.sha512">sha-512 hash</a>
                                 )
                                 </li>
                             </ul>
                             <p>
-                                <strong>NB:</strong> starting from 3.0.0-RC6, all releases are signed using GPG.
+                                <strong>NB:</strong> starting from 3.0.0, all releases are signed using GPG.
                                 The <i>release@phing.info</i> public key can be downloaded
                                 <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/56697956EBD451594B03AEFDD5F0CB76E2DD74F8">here</a>.
                                 To verify a release, run:
                             </p>
                             <pre>curl https://keys.openpgp.org/vks/v1/by-fingerprint/56697956EBD451594B03AEFDD5F0CB76E2DD74F8 | gpg --import
-gpg --verify phing-3.0.0-RC6.phar.asc</pre>
+gpg --verify phing-3.0.0.phar.asc</pre>
                         </div>
                         <div class="col-sm-6">
                             <h4 id="PEAR">PEAR (deprecated)</h4>
@@ -184,37 +184,12 @@ gpg --verify phing-3.0.0-RC6.phar.asc</pre>
                                 <strong>Our PEAR channel has been deprecated. Starting from 3.0, Phing will only be
                                     available through Composer or as a .phar archive.</strong>
                             </p>
-                            <p>
-                                You can install Phing by adding the <em>pear.phing.info</em> channel to your PEAR
-                                environment and then installing Phing using the <em>phing</em> channel alias and <em>phing</em>
-                                package name:
-                            </p>
-                            <pre>pear channel-discover pear.phing.info
-pear install [--alldeps] phing/phing</pre>
-                            <p>
-                                For more info, refer to the <a target="_blank" href="https://pear.phing.info">PEAR
-                                channel</a>.
-                            </p>
 
                             <h4 id="Manualinstall">Manual install (deprecated)</h4>
                             <p>
                                 <strong>Starting from version 3.0, Phing will only be available through Composer or as a
                                     .phar archive.</strong>
                             </p>
-                            <p>
-                                The full Phing package has a more traditional directory organization and contains the
-                                full documentation, test scripts, and build.xml files for (e.g.) building the
-                                PEAR-installable package. Please download one of the packages below if you would like to
-                                install the full Phing package.
-                            </p>
-                            <ul>
-                                <li><a href="/get/phing-2.17.4.tgz">phing-2.17.4.tgz</a> (<a
-                                        href="/get/phing-2.17.4.tgz.sha512">sha-512 hash</a>)
-                                </li>
-                                <li><a href="/get/phing-2.17.4.zip">phing-2.17.4.zip</a> (<a
-                                        href="/get/phing-2.17.4.zip.sha512">sha-512 hash</a>)
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -235,7 +210,7 @@ pear install [--alldeps] phing/phing</pre>
                                 </p>
                                 <p>
                                     <strong>NB:</strong> the documentation links below are autogenerated from the latest Phing <strong>development</strong> version.
-                                    For the latest stable version, please refer to <a href="https://github.com/phingofficial/phing/tree/2.17.4/docs/docbook5/en" target="_blank">this repository</a>.
+                                    For the latest stable version, please refer to <a href="https://github.com/phingofficial/phing/tree/3.0.0/docs/docbook5/en" target="_blank">this repository</a>.
                                 </p>
                                 <ul>
                                     <li><a href="/guide/chunkhtml/" target="_blank">Chunked HTML</a>
